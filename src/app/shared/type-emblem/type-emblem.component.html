@@ -1,23 +1,9 @@
-<div class="normal">
+<div class="{{this.type}}">
 	<div class="outer-circle mat-elevation-z10">
 		<div class="inner-circle">
-			<!--<object class="icon" type="image/svg+xml" data="{{'../../../assets/icons/type-icons/' + typeIconService.getIconByType(type)}}">-->
-				<!--Your browser does not support SVG-->
-			<!--</object>-->
+			<img class="icon" src="{{'../../../assets/icons/type-icons/' + this.typeIconService.getIconByType(this.type)}}">
 			<span class="type-label">
-				NORMAL
-		</span>
-		</div>
-	</div>
-</div>
-<div class="water">
-	<div class="outer-circle mat-elevation-z10">
-		<div class="inner-circle">
-			<object class="icon" type="image/svg+xml" data="../../../assets/icons/type-icons/bear-head-frontal-outline.svg">
-				Your browser does not support SVG
-			</object>
-			<span class="type-label">
-				NORMAL
+				{{this.type | uppercase}}
 		</span>
 		</div>
 	</div>

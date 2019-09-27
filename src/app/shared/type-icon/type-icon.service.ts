@@ -8,7 +8,7 @@ export class TypeIconService {
 	constructor() {
 	}
 
-	static getIconByType(pokemonType: string) {
+	getIconByType(pokemonType: string) {
 		switch (pokemonType) {
 			case 'normal': {
 				return 'bear-head-frontal-outline.svg'
