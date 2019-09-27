@@ -26,7 +26,7 @@ export class TypeIconService {
 				return 'dunes.svg'
 			}
 			case 'rock': {
-				return 'cav.svg'
+				return 'cave.svg'
 			}
 			case 'bug': {
 				return 'beetle.svg'
@@ -38,7 +38,7 @@ export class TypeIconService {
 				return 'gold-bars.svg'
 			}
 			case 'fire': {
-				return '001-firs.svg'
+				return '001-fire.svg'
 			}
 			case 'water': {
 				return '002-water.svg'

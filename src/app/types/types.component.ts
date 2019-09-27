@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {TYPES} from "./mock_types";
 
 @Component({
   selector: 'app-types',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TypesComponent implements OnInit {
 
-  constructor() { }
+	types = TYPES;
 
-  ngOnInit() {
-  }
+	constructor() {
+	}
+
+	ngOnInit() {
+	}
+
+	onClickTest(index: number) {
+		console.log(this.types[index]);
+	}
 
 }
