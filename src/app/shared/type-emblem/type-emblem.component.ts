@@ -9,15 +9,12 @@ import {TypeIconService} from "../type-icon/type-icon.service";
 export class TypeEmblemComponent implements OnInit {
 
 
-
-	type: string;
-
-	@Input() type;
+	@Input() type: string[];
 	constructor(public typeIconService: TypeIconService,) {
 	}
 
 	ngOnInit() {
-		console.log(this.typeIconService.getIconByType(this.type));
+		// console.log(this.typeIconService.getIconByType(this.type));
 	}
 
 }

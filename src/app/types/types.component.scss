@@ -1,6 +1,5 @@
 @import "../../variables.scss";
 
-
 .type-emblem-container {
 	display: flex;
 	flex-direction: row;
@@ -8,10 +7,10 @@
 }
 
 a {
-	transition: $transition;
-
 	&:hover {
+		transition: $transition;
 		cursor: pointer;
+		filter: brightness(110%);
 	}
 }
 
