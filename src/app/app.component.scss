@@ -1,12 +1,5 @@
 @import "../variables.scss";
 
-//$main-color: red;
-
-.test {
-	height: 500px;
-	width: 500px;
-}
-
 .page {
 	color: black;
 }
@@ -17,4 +10,10 @@
 
 .icon {
 	height: 200px;
+}
+
+.page-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }

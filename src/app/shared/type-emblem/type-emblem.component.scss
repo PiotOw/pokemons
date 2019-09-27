@@ -41,15 +41,6 @@
 	position: relative;
 }
 
-.circle {
-	width: 50vw;
-	height: 50vw;
-	background: linear-gradient(45deg, blue, blue 50%, red 50%, red);
-	border-radius: 50%;
-	box-shadow: inset 0px 0px 75px 0px #000000;
-
-}
-
 .icon-text {
 	display: flex;
 	flex-direction: column;
@@ -62,25 +53,26 @@
 	.icon {
 		width: 35px;
 		height: 35px;
+		font-weight: normal;
 	}
 	.type-label {
-		font-size: 10px;
+		font-size: 11px;
 	}
 	.half {
 		&:first-child {
 			position: absolute;
 			clip-path: polygon(-75px -75px, 0% calc(100% + 75px), calc(100% + 75px) calc(100% + 75px));
 			.icon-text {
-				right: 52%;
-				top: 52%;
+				right: 50%;
+				top: 50%;
 			}
 		}
 		&:last-child {
 			position: relative;
 			clip-path: polygon(-75px -75px, calc(100% + 75px) 0px, calc(100% + 75px) calc(100% + 75px));
 			.icon-text {
-				left: 52%;
-				bottom: 52%;
+				left: 50%;
+				bottom: 50%;
 			}
 		}
 	}

@@ -3,8 +3,11 @@ import {
 	MatIconModule
 } from '@angular/material';
 
+import {MatGridListModule} from '@angular/material/grid-list';
+
 const modules = [
-	MatIconModule
+	MatIconModule,
+	MatGridListModule,
 ]
 
 
@@ -13,6 +16,9 @@ const modules = [
 	imports: [
 		...modules
 	],
+	exports: [
+		...modules
+	]
 
 })
 export class PokemonMaterialModule {

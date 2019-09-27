@@ -9,7 +9,7 @@ import {PokemonMaterialModule} from "../../pokemon-material.module";
 	declarations: [TypeEmblemComponent],
 	imports: [
 		CommonModule,
-		PokemonMaterialModule
+		PokemonMaterialModule,
 	],
 	exports: [TypeEmblemComponent]
 })
