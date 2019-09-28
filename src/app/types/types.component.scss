@@ -1,17 +1,32 @@
 @import "../../variables.scss";
 
-.type-emblem-container {
-	//flex-direction: row;
+.type-emblem-container-5 {
+	width: 1050px;
+}
+.type-emblem-container-4 {
+	width: 840px;
+}
+.type-emblem-container-3 {
+	width: 630px;
+}
+.type-emblem-container-2 {
+	width: 420px;
+}
+.type-emblem-container-1 {
+	width: 210px;
 }
 
-a {
+.page {
+	width: 100%;
+}
+
+.type-emblem {
+	horiz-align: center;
+	margin: 20px;
+	float: left;
 	&:hover {
 		transition: $transition;
 		cursor: pointer;
 		filter: brightness(110%);
 	}
-}
-
-.type-emblem {
-	margin: 20px;
 }

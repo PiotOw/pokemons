@@ -1,13 +1,22 @@
+<!--<div class="page">-->
+	<!--<div class="type-emblem-container">-->
+		<!--<mat-grid-list cols="{{this.breakpoint}}" rowHeight="220px" (window:resize)="onResize($event)">-->
+			<!--<mat-grid-tile *ngFor="let type of types; let i = index" class="type-emblem"-->
+						   <!--(click)="onClickTest(i)">-->
+				<!--<a>-->
+					<!--<pok-type-emblem [type]=type></pok-type-emblem>-->
+				<!--</a>-->
+			<!--</mat-grid-tile>-->
+		<!--</mat-grid-list>-->
+	<!--</div>-->
+<!--</div>-->
+
 <div class="page">
-	<div class="type-emblem-container">
-		<mat-grid-list cols="{{this.breakpoint}}" rowHeight="220px" (window:resize)="onResize($event)">
-			<mat-grid-tile *ngFor="let type of types; let i = index" class="type-emblem"
-						   (click)="onClickTest(i)">
-				<a>
-					<pok-type-emblem [type]=type></pok-type-emblem>
-				</a>
-			</mat-grid-tile>
-		</mat-grid-list>
+	<div class="{{this.class}}">
+		<div class="type-emblem" *ngFor="let type of types; let i = index" (window:resize)="onResize($event)">
+			<a (click)="onClickTest(i)">
+				<pok-type-emblem [type]=type></pok-type-emblem>
+			</a>
+		</div>
 	</div>
 </div>
-
