@@ -1,2 +1,13 @@
-<span class="hello">this is types component</span>
-<app-type-emblem></app-type-emblem>
+<div class="page">
+	<div class="type-emblem-container">
+		<mat-grid-list cols="{{this.breakpoint}}" rowHeight="220px" (window:resize)="onResize($event)">
+			<mat-grid-tile *ngFor="let type of types; let i = index" class="type-emblem"
+						   (click)="onClickTest(i)">
+				<a>
+					<pok-type-emblem [type]=type></pok-type-emblem>
+				</a>
+			</mat-grid-tile>
+		</mat-grid-list>
+	</div>
+</div>
+
