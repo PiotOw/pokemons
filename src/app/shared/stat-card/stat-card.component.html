@@ -1,0 +1,13 @@
+<div class="card">
+	<div class="stat-emblem">
+		<div class="ring-outer-part">
+			<div class="ring-inner-part">
+				<img class="icon" src="{{'../../../assets/icons/stat-icons/' + this.statIconService.getIconByStat(this.stat.stat.name)}}">
+			</div>
+		</div>
+	</div>
+	<div class="description">
+		<span class="stat-name">{{this.stat.stat.name | uppercase}}</span>
+		<span class="stat-value">{{this.stat.base_stat}}</span>
+	</div>
+</div>

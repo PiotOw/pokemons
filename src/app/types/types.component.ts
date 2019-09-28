@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {TYPES} from "./mock_types";
+import {TYPES} from "../../mocks/mock_types";
 
 @Component({
 	selector: 'pok-types',
@@ -11,7 +11,7 @@ export class TypesComponent implements OnInit {
 	types = TYPES;
 
 	breakpoint: number;
-	class: string;
+	widthClass: string;
 	// breakpoints: string;
 
 	constructor() {
@@ -48,8 +48,8 @@ export class TypesComponent implements OnInit {
 		else if(this.breakpoint == 0){
 			this.breakpoint = 1;
 		}
-		this.class = "type-emblem-container-" + this.breakpoint;
-		console.log(this.class);
+		this.widthClass = "type-emblem-container-" + this.breakpoint;
+		console.log(this.widthClass);
 	}
 
 	onClickTest(index: number) {
@@ -64,8 +64,8 @@ export class TypesComponent implements OnInit {
 		else if(this.breakpoint == 0){
 			this.breakpoint = 1;
 		}
-		this.class = "type-emblem-container-" + this.breakpoint;
-		console.log(this.class);
+		this.widthClass = "type-emblem-container-" + this.breakpoint;
+		console.log(this.widthClass);
 	}
 
 

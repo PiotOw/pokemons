@@ -14,7 +14,7 @@ import {PokemonMaterialModule} from "../pokemon-material.module";
 		CommonModule,
 		TypesRoutingModule,
 		TypeEmblemModule,
-		PokemonMaterialModule
+		PokemonMaterialModule,
 	],
 	bootstrap: [TypesComponent],
 	exports: [
