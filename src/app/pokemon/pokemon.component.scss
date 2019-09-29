@@ -1,0 +1,49 @@
+@import '../../variables.scss';
+@import '../../color-scheme.scss';
+
+.pokemon {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.stats {
+	width: 600px;
+}
+
+.stat {
+	float: left;
+}
+
+.sprite {
+	width: 800px;
+	image-rendering: pixelated;
+	margin: -20%;
+}
+
+.content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	z-index: 1;
+	padding-top: 62px;
+}
+
+.background {
+	position: relative;
+}
+
+.background-primary {
+	position: absolute;
+	width: 1570px;
+	height: 500px;
+	clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+.background-secondary {
+	width: 1570px;
+	height: 500px;
+	position: absolute;
+	clip-path: polygon(0 0, 100% 0, 100% 100%);
+}

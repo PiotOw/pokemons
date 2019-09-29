@@ -1,1 +1,19 @@
-<p>pokemon works!</p>
+<div class="pokemon">
+	<div class="background">
+		<div class="background-primary {{this.type[0] + '-background'}}">
+		</div>
+		<div class="background-secondary {{this.type[1] + '-background'}}">
+		</div>
+	</div>
+	<div class="content">
+		<div class="type-emblem">
+			<pok-type-emblem [type]="type"></pok-type-emblem>
+		</div>
+		<img class="sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
+		<div class="stats">
+			<div class="stat" *ngFor="let stat of stats">
+				<pok-stat-card [stat]="stat"></pok-stat-card>
+			</div>
+		</div>
+	</div>
+</div>
