@@ -17,11 +17,11 @@
 	height: 170px;
 	&:hover {
 		.outer-circle {
-			transition: all 40ms ease-in-out;
+			transition: $transition;
 			filter: brightness(120%);
 		}
 		.inner-circle {
-			transition: all 40ms ease-in-out;
+			transition: $transition;
 			filter: brightness(70%);
 		}
 

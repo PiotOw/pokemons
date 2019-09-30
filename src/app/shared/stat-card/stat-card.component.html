@@ -1,9 +1,11 @@
 <div class="card">
 	<div class="stat-emblem">
-		<div class="ring-outer-part">
-			<div class="ring-inner-part">
-				<img class="icon" src="{{'../../../assets/icons/stat-icons/' + this.statIconService.getIconByStat(this.stat.stat.name)}}">
-			</div>
+		<div class="circle">
+			<svg height="80" width="80">
+				<circle cx="40" cy="40" r="37" stroke="rgba(255, 255, 255, 0.8)" stroke-width="6" fill="none"/>
+				Sorry, your browser does not support inline SVG.
+			</svg>
+		<img class="icon" src="{{'../../../assets/icons/stat-icons/' + this.statIconService.getIconByStat(this.stat.stat.name)}}">
 		</div>
 	</div>
 	<div class="description">
