@@ -2,7 +2,6 @@
 @import "../../../color-scheme";
 
 .outer-circle {
-
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -12,9 +11,7 @@
 	border-radius: 50%;
 }
 
-.type-emblem {
-	width: 170px;
-	height: 170px;
+.active {
 	&:hover {
 		.outer-circle {
 			transition: $transition;
@@ -24,8 +21,13 @@
 			transition: $transition;
 			filter: brightness(70%);
 		}
-
 	}
+
+}
+
+.type-emblem {
+	width: 170px;
+	height: 170px;
 }
 
 .inner-circle {
@@ -88,8 +90,8 @@
 			position: relative;
 			clip-path: polygon(-75px -75px, calc(100% + 75px) 0px, calc(100% + 75px) calc(100% + 75px));
 			.icon-text {
-				left: 50%;
-				bottom: 50%;
+				left: 51%;
+				bottom: 51%;
 			}
 		}
 	}

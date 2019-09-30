@@ -1,4 +1,4 @@
-<div class="type-emblem">
+<div class="type-emblem" [ngClass]="{'active': this.active}">
 	<div class="one-type" *ngIf="type.length==1">
 		<div class="{{this.type[0]}}">
 			<div class="outer-circle mat-elevation-z10">

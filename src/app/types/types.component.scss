@@ -18,6 +18,7 @@
 
 .page {
 	width: 100%;
+	padding-top: 100px;
 }
 
 .type-emblem {
@@ -25,8 +26,6 @@
 	margin: 20px;
 	float: left;
 	&:hover {
-		transition: $transition;
 		cursor: pointer;
-		//filter: brightness(110%);
 	}
 }

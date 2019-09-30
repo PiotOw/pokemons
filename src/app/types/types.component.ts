@@ -9,7 +9,6 @@ import {TYPES} from "../../mocks/mock_types";
 export class TypesComponent implements OnInit {
 
 	types = TYPES;
-
 	breakpoint: number;
 	widthClass: string;
 	// breakpoints: string;
@@ -67,6 +66,4 @@ export class TypesComponent implements OnInit {
 		this.widthClass = "type-emblem-container-" + this.breakpoint;
 		console.log(this.widthClass);
 	}
-
-
 }

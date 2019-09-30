@@ -1,12 +1,12 @@
-<div class="page">
-	<div class="nav-bar">
+<div class="page" (window:scroll)="onScroll($event)">
+	<div class="nav-bar" id="nav-bar">
 		<a class="logo" [routerLink]="['/']">
-			<span class="title part-1">POKE</span>
-			<img class="icon" src="../assets/icons/pokeballs.svg">
-			<span class="title part-2">APP</span>
+			<span class="title part-1" id="part-1">POKE</span>
+			<img class="icon" id="icon" src="../assets/icons/pokeballs.svg">
+			<span class="title part-2" id="part-2">APP</span>
 		</a>
 	</div>
-	<div class="page-content">
+	<div class="page-content" id="page-content">
 		<router-outlet></router-outlet>
 	</div>
 </div>

@@ -10,6 +10,7 @@ export class TypeEmblemComponent implements OnInit {
 
 
 	@Input() type: string[];
+	@Input() active: boolean;
 
 	constructor(public typeIconService: TypeIconService,) {
 	}
