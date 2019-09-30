@@ -9,7 +9,7 @@ export class AppComponent {
 	title = 'pokemons';
 
 	onScroll(event) {
-		if (window.scrollY < 180) {
+		if (window.scrollY < 200) {
 			document.getElementById("icon").style.height = 300 - window.scrollY + "px";
 			document.getElementById("icon").style.left = "calc(50% - " + (300 - window.scrollY) / 2 + "px)";
 			document.getElementById("part-1").style.right = "calc(50% + " + (300 - window.scrollY) / 2 + "px)";

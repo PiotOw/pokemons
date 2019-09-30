@@ -1,7 +1,7 @@
 @import "../../../variables";
 @import "../../../color-scheme";
 
-.outer-circle {
+.primary {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -13,13 +13,15 @@
 
 .active {
 	&:hover {
-		.outer-circle {
+		.primary {
 			transition: $transition;
 			filter: brightness(120%);
 		}
 		.inner-circle {
 			transition: $transition;
-			filter: brightness(70%);
+			filter: brightness(90%);
+			box-shadow: inset 0px 0px 75px 0px rgba(0, 0, 0, 0.6);
+
 		}
 	}
 
@@ -38,7 +40,6 @@
 	width: 160px;
 	height: 160px;
 	border-radius: 50%;
-	box-shadow: inset 0px 0px 75px 0px #000000;
 }
 
 .icon {

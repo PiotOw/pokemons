@@ -1,6 +1,17 @@
 @import '../../variables.scss';
 @import '../../color-scheme.scss';
 
+$height: 600px;
+
+.dual-type {
+	.background-primary {
+		clip-path: polygon(0 0, 0% 100%, 100% 100%);
+	}
+	.background-secondary {
+		clip-path: polygon(0 0, 100% 0, 100% 100%);
+	}
+}
+
 .pokemon {
 	display: flex;
 	flex-direction: row;
@@ -16,36 +27,34 @@
 }
 
 .sprite {
-	width: 800px;
+	width: 500px;
 	image-rendering: pixelated;
-	margin: -20%;
 }
 
 .content {
-	height: 500px;
+	height: $height;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
 	z-index: 1;
-	padding-top: 62px;
+	padding-top: 100px;
 }
 
 .background {
 	position: absolute;
 	left: 0px;
+	opacity: 0.3;
 }
 
 .background-primary {
 	position: absolute;
 	width: 100vw;
-	height: 500px;
-	clip-path: polygon(0 0, 0% 100%, 100% 100%);
+	height: $height;
 }
 
 .background-secondary {
-	width: 100vw;
-	height: 500px;
 	position: absolute;
-	clip-path: polygon(0 0, 100% 0, 100% 100%);
+	width: 100vw;
+	height: $height;
 }

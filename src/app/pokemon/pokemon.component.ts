@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {STATS} from "../../mocks/mock_stats";
+import {Component, Input, OnInit} from '@angular/core';
+import {Pokemon} from "../../models";
 
 @Component({
 	selector: 'pok-pokemon',
@@ -8,14 +8,14 @@ import {STATS} from "../../mocks/mock_stats";
 })
 export class PokemonComponent implements OnInit {
 
-	stats = STATS;
+	url: string;
 
-	type: string[] = ['water', 'ghost'];
-
+	@Input() pokemon: Pokemon;
 	constructor() {
 	}
 
 	ngOnInit() {
+		this.url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +this.pokemon.id+ ".png"
 	}
 
 }

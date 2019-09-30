@@ -1,17 +1,21 @@
 <div class="pokemon">
-	<div class="background">
-		<div class="background-primary {{this.type[0] + '-background'}}">
+	<div class="background" [ngClass]="{'dual-type': this.pokemon.types.length > 1}">
+		<div class="{{this.pokemon.types[0].name}}">
+			<div class="background-primary primary">
+			</div>
 		</div>
-		<div class="background-secondary {{this.type[1] + '-background'}}">
+		<div *ngIf="this.pokemon.types.length > 1" class="{{this.pokemon.types[1].name}}">
+			<div class="background-secondary primary">
+			</div>
 		</div>
 	</div>
 	<div class="content">
 		<div class="type-emblem">
-			<pok-type-emblem [type]="type" [active]="false"></pok-type-emblem>
+			<pok-type-emblem [type]="this.pokemon.types" [active]="false"></pok-type-emblem>
 		</div>
-		<img class="sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
+		<img class="sprite" src="{{this.url}}">
 		<div class="stats">
-			<div class="stat" *ngFor="let stat of stats">
+			<div class="stat" *ngFor="let stat of this.pokemon.stats">
 				<pok-stat-card [stat]="stat"></pok-stat-card>
 			</div>
 		</div>

@@ -1,39 +1,39 @@
 <div class="type-emblem" [ngClass]="{'active': this.active}">
 	<div class="one-type" *ngIf="type.length==1">
-		<div class="{{this.type[0]}}">
-			<div class="outer-circle mat-elevation-z10">
+		<div class="{{this.type[0].name}}">
+			<div class="primary mat-elevation-z10">
 				<div class="inner-circle">
 					<img class="icon"
-						 src="{{'../../../assets/icons/type-icons/' + this.typeIconService.getIconByType(this.type[0])}}">
+						 src="{{'../../../assets/icons/type-icons/' + this.typeIconService.getIconByType(this.type[0].name)}}">
 					<span class="type-label">
-				{{this.type[0] | uppercase}}
+				{{this.type[0].name | uppercase}}
 			</span>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="two-types" *ngIf="type.length==2">
-		<div class="{{this.type[0]}} half">
-			<div class="outer-circle mat-elevation-z10">
+		<div class="{{this.type[0].name}} half">
+			<div class="primary mat-elevation-z10">
 				<div class="inner-circle">
 					<div class="icon-text">
 						<img class="icon"
-							 src="{{'../../../assets/icons/type-icons/' + this.typeIconService.getIconByType(this.type[0])}}">
+							 src="{{'../../../assets/icons/type-icons/' + this.typeIconService.getIconByType(this.type[0].name)}}">
 						<span class="type-label">
-						{{this.type[0] | uppercase}}
+						{{this.type[0].name | uppercase}}
 					</span>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="{{this.type[1]}} half">
-			<div class="outer-circle mat-elevation-z10">
+		<div class="{{this.type[1].name}} half">
+			<div class="primary mat-elevation-z10">
 				<div class="inner-circle">
 					<div class="icon-text">
 						<img class="icon"
-							 src="{{'../../../assets/icons/type-icons/' + this.typeIconService.getIconByType(this.type[1])}}">
+							 src="{{'../../../assets/icons/type-icons/' + this.typeIconService.getIconByType(this.type[1].name)}}">
 						<span class="type-label">
-						{{this.type[1] | uppercase}}
+						{{this.type[1].name | uppercase}}
 					</span>
 					</div>
 				</div>

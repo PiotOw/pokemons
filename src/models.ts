@@ -22,20 +22,28 @@ export class Effect {
 }
 
 export class DamageRelation {
-	double_damage_from: Type[];
-	double_damage_to: Type[];
-	half_damage_from: Type[];
-	half_damage_to: Type[];
-	no_damage_from: Type[];
-	no_damage_to: Type[];
+	double_damage_from: DamageRelationType[];
+	double_damage_to: DamageRelationType[];
+	half_damage_from: DamageRelationType[];
+	half_damage_to: DamageRelationType[];
+	no_damage_from: DamageRelationType[];
+	no_damage_to: DamageRelationType[];
+}
+
+export class DamageRelationType {
+	name: string;
 }
 
 export class Type {
-	damage_relations: DamageRelation[];
+	damage_relations: DamageRelation;
 	id: number;
 	move_damage_class: DamageType;
 	name: string;
-	pokemon: Pokemon[];
+	pokemon: PokemonName[];
+}
+
+export class PokemonName {
+	name: string;
 }
 
 export class DamageType {
@@ -68,7 +76,6 @@ export class Stat {
 
 export class StatType {
 	name: string;
-	id: number;
 }
 
 export class GrowthRate {

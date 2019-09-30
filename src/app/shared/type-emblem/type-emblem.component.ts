@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {TypeIconService} from "../type-icon-service/type-icon.service";
+import {Type} from "../../../models";
 
 @Component({
 	selector: 'pok-type-emblem',
@@ -9,7 +10,7 @@ import {TypeIconService} from "../type-icon-service/type-icon.service";
 export class TypeEmblemComponent implements OnInit {
 
 
-	@Input() type: string[];
+	@Input() type: Type[];
 	@Input() active: boolean;
 
 	constructor(public typeIconService: TypeIconService,) {
