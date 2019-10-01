@@ -11,7 +11,6 @@ export class StatCardComponent implements OnInit {
 
 
 	@Input() stat: Stat;
-
 	constructor(public statIconService: StatIconService) {
 	}
 

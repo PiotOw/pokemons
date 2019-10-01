@@ -12,6 +12,9 @@
 }
 
 .active {
+	.primary {
+		box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.4);
+	}
 	&:hover {
 		.primary {
 			transition: $transition;
@@ -21,7 +24,6 @@
 			transition: $transition;
 			filter: brightness(90%);
 			box-shadow: inset 0px 0px 75px 0px rgba(0, 0, 0, 0.6);
-
 		}
 	}
 
@@ -83,8 +85,8 @@
 			position: absolute;
 			clip-path: polygon(-75px -75px, 0% calc(100% + 75px), calc(100% + 75px) calc(100% + 75px));
 			.icon-text {
-				right: 50%;
-				top: 50%;
+				right: 52%;
+				top: 51%;
 			}
 		}
 		&:last-child {
