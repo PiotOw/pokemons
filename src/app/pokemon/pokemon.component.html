@@ -12,13 +12,24 @@
 		</div>
 		<div class="content">
 			<div class="column">
+				<div class="pika-ruler">
+				<img src="../../assets/icons/pikachu.png" class="pikachu" id="first" [ngStyle]="{'height.px': this.pikachusHeight}" >
+				<img *ngFor="let i of [].constructor(this.pikaHeightRound)"
+					 src="../../assets/icons/pikachu.png" class="pikachu" [ngStyle]="{'height.px': this.pikachusHeight}" >
+			</div>
+			</div>
+
+			<div class="column">
 				<div class="overview">
 					<div class="info">
 						<div>
 							Height:
 						</div>
 						<div class="value">
-							{{this.pokemon.height + "cm"}}
+							{{this.pokemon.height * 10 + "cm"}}
+						</div>
+						<div class="pikachus">
+							{{this.pikachuService.getPikachusByHeight(this.pokemon.height) + " Pikachu"}}
 						</div>
 					</div>
 					<div class="info">
@@ -26,7 +37,10 @@
 							Weight:
 						</div>
 						<div class="value">
-							{{this.pokemon.weight + "kg"}}
+							{{this.pokemon.weight / 10 + "kg"}}
+						</div>
+						<div class="pikachus">
+							{{this.pikachuService.getPikachusByWeight(this.pokemon.weight) + " Pikachu"}}
 						</div>
 					</div>
 					<div class="info">

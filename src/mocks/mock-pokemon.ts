@@ -227,10 +227,10 @@ export const mockPokemon: Pokemon =
 	{
 		abilities: ABIILITIES,
 		base_experience: 64,
-		height: 40,
-		id: 132,
+		height: 31,
+		id: 25,
 		weight: 30,
-		name: 'PIKA PIKA',
+		name: 'Pikachu',
 		stats: STATS,
 		types: [TYPES[2], TYPES[0]]
 	};

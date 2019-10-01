@@ -13,7 +13,7 @@ export class TypeEmblemComponent implements OnInit {
 	@Input() type: Type[];
 	@Input() active: boolean;
 
-	constructor(public typeIconService: TypeIconService,) {
+	constructor(public typeIconService: TypeIconService) {
 	}
 
 	ngOnInit() {
