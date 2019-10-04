@@ -3,6 +3,8 @@ import {CommonModule} from '@angular/common';
 import {PokemonComponent} from './pokemon.component';
 import {StatCardModule} from "../shared/stat-card/stat-card.module";
 import {TypeEmblemModule} from "../shared/type-emblem/type-emblem.module";
+import {OverviewModule} from "./overview/overview.module";
+import {StatsComponent} from "./stats/stats.component";
 
 
 @NgModule({
@@ -10,7 +12,8 @@ import {TypeEmblemModule} from "../shared/type-emblem/type-emblem.module";
 	imports: [
 		CommonModule,
 		StatCardModule,
-		TypeEmblemModule
+		TypeEmblemModule,
+		OverviewModule,
 	],
 	exports: [PokemonComponent]
 })

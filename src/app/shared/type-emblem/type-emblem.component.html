@@ -1,8 +1,8 @@
 <div class="type-emblem" [ngClass]="{'active': this.active}">
 	<div class="one-type" *ngIf="type.length==1">
 		<div class="{{this.type[0].name}}">
-			<div class="primary mat-elevation-z10">
-				<div class="inner-circle">
+			<div class="primary-color mat-elevation-z10">
+				<div class="secondary-color">
 					<img class="icon"
 						 src="{{'../../../assets/icons/type-icons/' + this.typeIconService.getIconByType(this.type[0].name)}}">
 					<span class="type-label">
@@ -14,8 +14,8 @@
 	</div>
 	<div class="two-types" *ngIf="type.length==2">
 		<div class="{{this.type[0].name}} half">
-			<div class="primary ">
-				<div class="inner-circle">
+			<div class="primary-color">
+				<div class="secondary-color">
 					<div class="icon-text">
 						<img class="icon"
 							 src="{{'../../../assets/icons/type-icons/' + this.typeIconService.getIconByType(this.type[0].name)}}">
@@ -27,8 +27,8 @@
 			</div>
 		</div>
 		<div class="{{this.type[1].name}} half">
-			<div class="primary ">
-				<div class="inner-circle">
+			<div class="primary-color">
+				<div class="secondary-color">
 					<div class="icon-text">
 						<img class="icon"
 							 src="{{'../../../assets/icons/type-icons/' + this.typeIconService.getIconByType(this.type[1].name)}}">
