@@ -4,7 +4,7 @@ import {PokemonComponent} from './pokemon.component';
 import {StatCardModule} from "../shared/stat-card/stat-card.module";
 import {TypeEmblemModule} from "../shared/type-emblem/type-emblem.module";
 import {OverviewModule} from "./overview/overview.module";
-import {StatsComponent} from "./stats/stats.component";
+import {StatsModule} from "./stats/stats.module";
 
 
 @NgModule({
@@ -14,6 +14,7 @@ import {StatsComponent} from "./stats/stats.component";
 		StatCardModule,
 		TypeEmblemModule,
 		OverviewModule,
+		StatsModule
 	],
 	exports: [PokemonComponent]
 })

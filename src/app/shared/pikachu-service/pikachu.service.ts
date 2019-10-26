@@ -5,10 +5,10 @@ import {Injectable} from '@angular/core';
 })
 export class PikachuService {
 
-	getPikachusByHeight(number) {
+	getHeightInPickachus(number) {
 		return (number/4);
 	}
-	getPikachusByWeight(number) {
+	getWeightInPikachus(number) {
 		return (number/60);
 	}
 

@@ -2,18 +2,7 @@
 	<div class="section">
 		<pok-overview [pokemon]="this.pokemon"></pok-overview>
 	</div>
-	<div class="card stats">
-		<div class="title">
-			STATS
-		</div>
-		<div class="content">
-			<div class="stats-container">
-				<div class="stat" *ngFor="let stat of this.pokemon.stats">
-					<pok-stat-card [stat]="stat"></pok-stat-card>
-				</div>
-			</div>
-		</div>
-	</div>
+	<pok-stats [stats]="this.pokemon.stats"></pok-stats>
 	<div class="card evo">
 
 	</div>

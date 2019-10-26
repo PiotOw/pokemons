@@ -23,15 +23,15 @@ export class PikaRulerComponent implements OnInit {
 
 	ngOnInit() {
 
-		this.pikachusHeight = 400 / this.pikachuService.getPikachusByHeight(this.pokemon.height);
+		this.pikachusHeight = 400 / this.pikachuService.getHeightInPickachus(this.pokemon.height);
 
 		if(this.pikachusHeight > 200) {
 			this.pikachusHeight = 200;
 		}
 
-		this.pikaHeightRound = Math.floor(this.pikachuService.getPikachusByHeight(this.pokemon.height));
+		this.pikaHeightRound = Math.floor(this.pikachuService.getHeightInPickachus(this.pokemon.height));
 
-		this.cutoff = 100 - (this.pikachuService.getPikachusByHeight(this.pokemon.height) - this.pikaHeightRound) *100;
+		this.cutoff = 100 - (this.pikachuService.getHeightInPickachus(this.pokemon.height) - this.pikaHeightRound) *100;
 
 		console.log(this.cutoff);
 
