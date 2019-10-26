@@ -5,7 +5,7 @@ import {StatCardModule} from "../shared/stat-card/stat-card.module";
 import {TypeEmblemModule} from "../shared/type-emblem/type-emblem.module";
 import {OverviewModule} from "./overview/overview.module";
 import {StatsModule} from "./stats/stats.module";
-
+import {PokemonRoutingModule} from "./pokemon-routing.module";
 
 @NgModule({
 	declarations: [PokemonComponent],
@@ -14,7 +14,9 @@ import {StatsModule} from "./stats/stats.module";
 		StatCardModule,
 		TypeEmblemModule,
 		OverviewModule,
-		StatsModule
+		StatsModule,
+		PokemonRoutingModule
+
 	],
 	exports: [PokemonComponent]
 })

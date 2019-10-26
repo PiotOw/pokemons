@@ -1,21 +1,21 @@
-<div class="pokemon-emblem" [ngClass]="{'active': this.active}">
+<div class="pokemon-emblem" [ngClass]="{'active': active}">
 	<div class="background">
 		<div class="one-type" *ngIf="type.length==1">
-			<div class="{{this.pokemon.types[0].name}}">
+			<div class="{{pokemon.types[0].type.name}}">
 				<div class="primary mat-elevation-z10">
 					<div class="inner-circle">
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="two-types" *ngIf="this.pokemon.types.length==2">
-			<div class="{{this.pokemon.types[0].name}} half">
+		<div class="two-types" *ngIf="pokemon.types.length==2">
+			<div class="{{pokemon.types[0].type.name}} half">
 				<div class="primary-color">
 					<div class="secondary-color">
 					</div>
 				</div>
 			</div>
-			<div class="{{this.pokemon.types[1].name}} half">
+			<div class="{{pokemon.types[1].name}} half">
 				<div class="primary-color">
 					<div class="secondary-color">
 					</div>
@@ -25,10 +25,10 @@
 	</div>
 	<div class="miniature">
 		<div class="sprite">
-			<img src="{{this.url}}">
+			<img src="{{url}}">
 		</div>
 		<div class="name">
-			{{this.pokemon.name | uppercase}}
+			{{pokemon.name | uppercase}}
 		</div>
 	</div>
 </div>

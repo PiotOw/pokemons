@@ -4,7 +4,8 @@ import {Routes, RouterModule} from '@angular/router';
 
 const routes: Routes = [
 	{path: '', loadChildren: './types/types.module#TypesModule'},
-	{path: 'pokemons', loadChildren: './pokemons/pokemons.module#PokemonsModule'}
+	{path: 'pokemons', loadChildren: './pokemons/pokemons.module#PokemonsModule'},
+	{path: 'pokemon/:id', loadChildren: './pokemon/pokemon.module#PokemonModule'}
 ];
 
 @NgModule({

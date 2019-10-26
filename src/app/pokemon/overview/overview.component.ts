@@ -22,12 +22,4 @@ export class OverviewComponent implements OnInit {
 
 	}
 
-	checkMultipleDamageTypes() {
-		if(this.pokemon.types.length == 1 || this.pokemon.types[0].move_damage_class == this.pokemon.types[1].move_damage_class) {
-			return false;
-		}
-		else {
-			return true;
-		}
-	}
 }

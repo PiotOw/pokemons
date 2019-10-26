@@ -1,5 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {TYPES} from "../../mocks/mock_types";
+import {TypeService} from "../shared/type-service/type.service";
+import {Subject} from "rxjs";
+import {takeUntil} from "rxjs/operators";
+import {PokemonType, Type} from "../../models";
 
 @Component({
 	selector: 'pok-types',
@@ -8,37 +12,16 @@ import {TYPES} from "../../mocks/mock_types";
 })
 export class TypesComponent implements OnInit {
 
-	types = TYPES;
+	pokemonTypes: PokemonType[];
 	breakpoint: number;
 	widthClass: string;
-	// breakpoints: string;
 
-	constructor() {
+	private unsubscribe$ = new Subject<void>();
+
+
+	constructor(private typeService: TypeService) {
 	}
 
-	// ngOnInit() {
-	// 	this.breakpoint = Math.floor(window.innerWidth / 220);
-	// 	if(this.breakpoint > 5) {
-	// 		this.breakpoint = 5;
-	// 	}
-	// 	this.breakpoints = this.breakpoint * 220 + "px";
-	// 	console.log(this.breakpoint);
-	// }
-	//
-	// onClickTest(index: number) {
-	// 	console.log(this.types[index]);
-	// }
-	//
-	// onResize(event) {
-	// 	this.breakpoint = Math.floor(event.target.innerWidth / 220);
-	// 	if(this.breakpoint > 5) {
-	// 		this.breakpoint = 5;
-	// 	}
-	// 	this.breakpoints = this.breakpoint * 220 + "px";
-	// 	console.log(this.breakpoint);
-	// 	console.log(this.breakpoints);
-	// }
-	//
 	ngOnInit() {
 		this.breakpoint = Math.floor(window.innerWidth / 210);
 		if(this.breakpoint > 5) {
@@ -47,15 +30,13 @@ export class TypesComponent implements OnInit {
 		else if(this.breakpoint == 0){
 			this.breakpoint = 1;
 		}
-		this.widthClass = "type-emblem-container-" + this.breakpoint;
-		console.log(this.widthClass);
+		this.getTypes();
 	}
 
-	onClickTest(index: number) {
-		console.log(this.types[index]);
+	onClickTest(index: number): void {
 	}
 
-	onResize(event) {
+	onResize(event): void {
 		this.breakpoint = Math.floor(window.innerWidth / 210);
 		if(this.breakpoint > 5) {
 			this.breakpoint = 5;
@@ -63,7 +44,15 @@ export class TypesComponent implements OnInit {
 		else if(this.breakpoint == 0){
 			this.breakpoint = 1;
 		}
-		this.widthClass = "type-emblem-container-" + this.breakpoint;
+		this.widthClass = "types-emblem-container-" + this.breakpoint;
 		console.log(this.widthClass);
+	}
+
+	getTypes(): void {
+		this.typeService.getTypes()
+			.pipe(takeUntil(this.unsubscribe$))
+			.subscribe(response => {
+				this.pokemonTypes = response.results.map(type => PokemonType.fromType(type));
+			})
 	}
 }

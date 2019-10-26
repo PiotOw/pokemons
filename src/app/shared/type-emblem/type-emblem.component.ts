@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {TypeIconService} from "../type-icon-service/type-icon.service";
-import {Type} from "../../../models";
+import {PokemonType} from "../../../models";
 
 @Component({
 	selector: 'pok-type-emblem',
@@ -10,14 +10,13 @@ import {Type} from "../../../models";
 export class TypeEmblemComponent implements OnInit {
 
 
-	@Input() type: Type[];
+	@Input() types: PokemonType[];
 	@Input() active: boolean;
 
 	constructor(public typeIconService: TypeIconService) {
 	}
 
 	ngOnInit() {
-		// console.log(this.typeIconService.getIconByType(this.type));
 	}
 
 }

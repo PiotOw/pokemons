@@ -4,6 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {PokemonMaterialModule} from "./pokemon-material.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
 	declarations: [
@@ -12,7 +13,8 @@ import {PokemonMaterialModule} from "./pokemon-material.module";
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
-		PokemonMaterialModule
+		PokemonMaterialModule,
+		HttpClientModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

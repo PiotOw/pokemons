@@ -6,7 +6,7 @@ export class Pokemon {
 	weight: number;
 	name: string;
 	stats: Stat[];
-	types: Type[];
+	types: PokemonType[];
 }
 
 export class Ability {
@@ -34,12 +34,27 @@ export class DamageRelationType {
 	name: string;
 }
 
+export class PokemonType {
+
+	constructor() {
+		this.type = {
+			name: null
+		};
+	}
+
+	type: {
+		name: string;
+	};
+
+	static fromType(type: Type): PokemonType {
+		const pokemonType = new PokemonType();
+		pokemonType.type.name = type.name;
+		return pokemonType;
+	}
+}
+
 export class Type {
-	damage_relations: DamageRelation;
-	id: number;
-	move_damage_class: DamageType;
 	name: string;
-	pokemon: PokemonName[];
 }
 
 export class PokemonName {
@@ -86,4 +101,9 @@ export class GrowthRate {
 export class Evolution {
 	evolves_to: Evolution[];
 	species: Species;
+}
+
+export class ApiResponse<T> {
+	count: number;
+	results: T;
 }

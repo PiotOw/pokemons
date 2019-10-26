@@ -8,7 +8,7 @@ import {
 	Pokemon, PokemonName,
 	Stat,
 	StatType,
-	Type
+	PokemonType
 } from "../models";
 
 
@@ -167,58 +167,6 @@ export const pokemon1: PokemonName = {
 };
 
 
-export const TYPES: Type[] = [
-	{
-		damage_relations: damageRelations,
-		id: 1,
-		move_damage_class: DAMAGE_TYPES[1],
-		name: "normal",
-		pokemon: [pokemon1]
-	},
-	{
-		damage_relations: damageRelations,
-		id: 2,
-		move_damage_class: DAMAGE_TYPES[1],
-		name: "fighting",
-		pokemon: [pokemon1]
-	},
-	{
-		damage_relations: damageRelations,
-		id: 3,
-		move_damage_class: DAMAGE_TYPES[0],
-		name: "flying",
-		pokemon: [pokemon1]
-	},
-	{
-		damage_relations: damageRelations,
-		id: 4,
-		move_damage_class: DAMAGE_TYPES[2],
-		name: "poison",
-		pokemon: [pokemon1]
-	},
-	{
-		damage_relations: damageRelations,
-		id: 5,
-		move_damage_class: DAMAGE_TYPES[0],
-		name: "ground",
-		pokemon: [pokemon1]
-	},
-	{
-		damage_relations: damageRelations,
-		id: 6,
-		move_damage_class: DAMAGE_TYPES[2],
-		name: "rock",
-		pokemon: [pokemon1]
-	},
-	{
-		damage_relations: damageRelations,
-		id: 7,
-		move_damage_class: DAMAGE_TYPES[1],
-		name: "bug",
-		pokemon: [pokemon1]
-	}
-];
-
 
 
 
@@ -232,7 +180,7 @@ export const mockPokemon: Pokemon =
 		weight: 30,
 		name: 'Pikachu',
 		stats: STATS,
-		types: [TYPES[2], TYPES[0]]
+		types: []
 	};
 
 

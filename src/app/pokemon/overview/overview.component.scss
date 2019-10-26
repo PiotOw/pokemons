@@ -79,6 +79,12 @@ $height: 600px;
 					font-weight: bold;
 					display: flex;
 					flex-direction: row;
+
+					span {
+						&:nth-child(2) {
+							margin-left: 10px;
+						}
+					}
 				}
 				.pikachus {
 					font-size: 12px;
